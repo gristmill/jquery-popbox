@@ -17,11 +17,8 @@
         var pop = $(this);
         var box = $(this).parent().find(settings['box']);
 
-        var arrow = box.find(settings['arrow']);
-        var arrow_border = box.find(settings['arrow-border']);
-
-        arrow.css({'left': box.width()/2 - 10});
-        arrow_border.css({'left': box.width()/2 - 10});
+        var arrow = box.find(settings['arrow']).css({'left': box.width()/2 - 10});
+        var arrow_border = box.find(settings['arrow-border']).css({'left': box.width()/2 - 10});
 
         if(box.css('display') == 'block'){
           methods.close();
