@@ -6,7 +6,7 @@
 
   .collapse { position:relative; }
 
-  .pop {
+  .open {
     background:#DDD;
     border:solid 1px #FFF;
     border-radius:5px;
@@ -27,7 +27,7 @@
       position:absolute;
     }
 
-      .box a.cancel {
+      .box a.close {
        color:red;
        font-size:12px;
        font-family:arial;

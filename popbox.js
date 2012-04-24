@@ -3,11 +3,11 @@
   $.fn.popbox = function(options){
     var settings = $.extend({
       'selector'      : this.selector,
-      'pop'           : '.pop',
+      'open'          : '.open',
       'box'           : '.box',
       'arrow'         : '.arrow',
       'arrow-border'  : '.arrow-border',
-      'cancel'        : '.cancel'
+      'close'         : '.close'
     }, options);
 
     var methods = {
@@ -46,8 +46,8 @@
 
     return this.each(function(){
       $(this).css({'width': $(settings['box']).width()}); // Width needs to be set otherwise popbox will not move when window resized.
-      $(settings['pop'], this).bind('click', methods.open);
-      $(settings['pop'], this).parent().find(settings['cancel']).bind('click', methods.close);
+      $(settings['open'], this).bind('click', methods.open);
+      $(settings['open'], this).parent().find(settings['close']).bind('click', methods.close);
     });
   }
 
