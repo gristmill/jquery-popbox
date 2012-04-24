@@ -2,12 +2,12 @@
 
   $.fn.popbox = function(options){
     var settings = $.extend({
-      'box': '.box',
-      'arrow': '.arrow',
-      'arrow-border': '.arrow-border',
-      'popbox': '.popbox',
-      'pop': '.pop',
-      'cancel': '.cancel'
+      'box'           : '.box',
+      'arrow'         : '.arrow',
+      'arrow-border'  : '.arrow-border',
+      'popbox'        : '.popbox',
+      'pop'           : '.pop',
+      'cancel'        : '.cancel'
     }, options);
 
     var methods = {
