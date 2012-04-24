@@ -1,6 +1,8 @@
 (function(){
   $.fn.popbox = function(){
     var open = function(event){
+      event.preventDefault()
+
       var pop = $(this)
       var box = $(this).parent().find('.box');
 
@@ -10,12 +12,13 @@
       arrow.css({'left': box.width()/2 - 10});
       arrow_border.css({'left': box.width()/2 - 10});
 
-      if(box.css('display')=='block'){
+      if(box.css('display') == 'block'){
         close()
       } else {
-        box.css({'display': 'block', 'top': '10px'});
+        box.css({'display': 'block', 'top': 10, 'left': ((pop.parent().width()/2) -box.width()/2 )});
       }
     }
+
     var close = function(){
       $('.box').fadeOut("fast")
     }
@@ -36,5 +39,4 @@
       }
     });
   }
-
 }).call(this);
