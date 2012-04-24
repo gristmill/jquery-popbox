@@ -15,7 +15,7 @@ jQuery PopBox requires a specific HTML structure in order to work.
       <div class='arrow-border'></div>
 
       Content in PopBox goes here :)
-      <a href="#" class="cancel">close</a>
+      <a href="#" class="close">close</a>
     </div>
   </div>
 </div>
