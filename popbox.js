@@ -2,7 +2,7 @@
 
   $.fn.popbox = function(options){
     var settings = $.extend({
-      'popbox'        : '.popbox',
+      'selector'      : this.selector,
       'pop'           : '.pop',
       'box'           : '.box',
       'arrow'         : '.arrow',
@@ -39,7 +39,7 @@
     });
 
     $(document).bind('click', function(event){
-      if(!$(event.target).closest(settings['popbox']).length){
+      if(!$(event.target).closest(settings['selector']).length){
         methods.close();
       }
     });
