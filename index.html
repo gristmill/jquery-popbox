@@ -2,14 +2,9 @@
 <head>
   <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
   <title>Calendar</title>
-  <link rel='stylesheet' href='style.css' type='text/css' media='screen' charset='utf-8'>
+  <link rel='stylesheet' href='popbox.css' type='text/css' media='screen' charset='utf-8'>
   <script type='text/javascript' charset='utf-8' src='../jquery.js'></script>
   <script type='text/javascript' charset='utf-8' src='popbox.js'></script>
-  <script type='text/javascript' charset='utf-8'>
-    $(document).ready(function(){
-      $('.popbox').popbox();
-    });
-  </script>
   <style type='text/css' media='screen'>
     body {
       text-align:center;
@@ -23,13 +18,24 @@
     a { color:#999; text-decoration:none; }
     label { display: block; }
     form { margin: 25px; text-align:left }
-    form input[type=text] { padding:5px; width:90%; }
-    
-    .popbox { width:150px; padding:5px; background:#DDD; border:solid 1px #FFF; border-radius:5px; box-shadow: 0px 0px 5px #CCC; }
+    form input[type=text] { padding:5px; width:90%; border:solid 1px #CCC;}
+    form textarea { padding:5px; width:90%; border:solid 1px #CCC; height:100px;}
+
     .box { width:300px; }
+
+     footer {
+       font-size:12px;
+     }
+     footer a { color:#40738d; }
   </style>
+  <script type='text/javascript' charset='utf-8'>
+    $(document).ready(function(){
+      $('.popbox').popbox();
+    });
+  </script>
 </head>
 <body>
+  <h1>PopBox</h1>
 
   <div class='popbox'>
     <a class='pop' href='#'>
@@ -41,18 +47,27 @@
         <div class='arrow'></div>
         <div class='arrow-border'></div>
 
-        <form action='/' method='post' accept-charset='utf-8'>
-          <p><label for='first_name'>First Name</label><input type='text' name='first_name' value='' id='first_name'></p>
-          <p><label for='first_name'>Last Name</label><input type='text' name='first_name' value='' id='first_name'></p>
-          <p><input type='submit' value='Continue &rarr;'></p>
+        <form action="http://gristmill.createsend.com/t/j/s/nklki/" method="post" id="subForm">
+          <small>Please complete the form to sign up for our mailing list!</small>
+          <div class="input">
+            <input type="text" name="cm-name" id="name" placeholder="Name" />
+          </div>
+          <div class="input">
+            <input type="text" name="cm-nklki-nklki" id="nklki-nklki" placeholder="Email" />
+          </div>
+          <div class="input">
+            <textarea name="cm-f-tlhll" id="Message" placeholder="Let us know what you're looking for."></textarea>
+          </div>
+          <input type="submit" value="Get In Touch" /> <a href="#" class="cancel">Cancel</a>
         </form>
 
       </div>
     </div>
   </div>
 
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+  <p>jQuery PopBox is a simple, HighRise inspired balloon UI element.</p>
 
+  <footer>
+    Developed by <a href="http://twitter.com/_sbehan">Sean Behan</a> at <a href="http://gristmill.io">Gristmill</a>
+  </footer>
 </body>

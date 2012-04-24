@@ -1,42 +1,56 @@
 (function(){
-  $.fn.popbox = function(){
-    var open = function(event){
-      event.preventDefault()
 
-      var pop = $(this)
-      var box = $(this).parent().find('.box');
+  $.fn.popbox = function(options){
+    var settings = $.extend({
+      'box': '.box',
+      'arrow': '.arrow',
+      'arrow-border': '.arrow-border',
+      'popbox': '.popbox',
+      'pop': '.pop',
+      'cancel': '.cancel'
+    }, options);
 
-      var arrow = box.find('.arrow');
-      var arrow_border = box.find('.arrow-border');
+    var methods = {
+      open: function(event){
+        event.preventDefault()
 
-      arrow.css({'left': box.width()/2 - 10});
-      arrow_border.css({'left': box.width()/2 - 10});
+        var pop = $(this)
+        var box = $(this).parent().find(settings['box']);
 
-      if(box.css('display') == 'block'){
-        close()
-      } else {
-        box.css({'display': 'block', 'top': 10, 'left': ((pop.parent().width()/2) -box.width()/2 )});
+        var arrow = box.find(settings['arrow']);
+        var arrow_border = box.find(settings['arrow-border']);
+
+        arrow.css({'left': box.width()/2 - 10});
+        arrow_border.css({'left': box.width()/2 - 10});
+
+        if(box.css('display') == 'block'){
+          methods.close
+        } else {
+          box.css({'display': 'block', 'top': 10, 'left': ((pop.parent().width()/2) -box.width()/2 )});
+        }
+      },
+
+      close: function(){
+        $(settings['box']).fadeOut("fast")
       }
-    }
+    };
 
-    var close = function(){
-      $('.box').fadeOut("fast")
-    }
-
-    this.each(function(){
-      $('.pop', this).bind('click', open)
-    });
-
-    $('body').bind('keyup', function(event){
+    $(document).bind('keyup', function(event){
       if(event.keyCode == 27){
-        close();
+        methods.close()
       }
     });
 
     $(document).bind('click', function(event){
-      if(!$(event.target).closest('.popbox').length){
-        close()
+      if(!$(event.target).closest(settings['popbox']).length){
+        methods.close()
       }
     });
+
+    return this.each(function(){
+      $(settings['pop'], this).bind('click', methods.open)
+      $(settings['pop'], this).parent().find(settings['cancel']).bind('click', methods.close)
+    });
   }
+
 }).call(this);
