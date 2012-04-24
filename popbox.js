@@ -2,12 +2,12 @@
 
   $.fn.popbox = function(options){
     var settings = $.extend({
-      'selector'      : this.selector,
-      'open'          : '.open',
-      'box'           : '.box',
-      'arrow'         : '.arrow',
-      'arrow-border'  : '.arrow-border',
-      'close'         : '.close'
+      selector      : this.selector,
+      open          : '.open',
+      box           : '.box',
+      arrow         : '.arrow',
+      arrow_border  : '.arrow-border',
+      close         : '.close'
     }, options);
 
     var methods = {
@@ -18,7 +18,7 @@
         var box = $(this).parent().find(settings['box']);
 
         box.find(settings['arrow']).css({'left': box.width()/2 - 10});
-        box.find(settings['arrow-border']).css({'left': box.width()/2 - 10});
+        box.find(settings['arrow_border']).css({'left': box.width()/2 - 10});
 
         if(box.css('display') == 'block'){
           methods.close();
