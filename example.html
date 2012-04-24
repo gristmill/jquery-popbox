@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+  <title>PopBox</title>
+  <link rel='stylesheet' href='stylesheets/popbox.css' type='text/css' media='screen' charset='utf-8'>
+  <script type='text/javascript' charset='utf-8' src='javascripts/jquery.js'></script>
+  <script type='text/javascript' charset='utf-8' src='javascripts/popbox.js'></script>
+  <style type='text/css' media='screen'>
+    body {
+      text-align:center;
+      background:#f7f7f7;
+      font-family:georgia;
+      font-size:22px;
+      text-shadow:1px 1px 1px #FFF;
+      margin:200px;
+    }
+
+    a { color:#999; text-decoration:none; }
+    label { display: block; }
+    form { margin: 25px; text-align:left }
+    form input[type=text] { padding:5px; width:90%; border:solid 1px #CCC;}
+    form textarea { padding:5px; width:90%; border:solid 1px #CCC; height:100px;}
+
+    .box { width:350px; }
+
+     footer {
+       font-size:12px;
+     }
+     form a, footer a { color:#40738d; }
+  </style>
+  <script type='text/javascript' charset='utf-8'>
+    $(document).ready(function(){
+      $('.popbox').popbox();
+    });
+  </script>
+</head>
+<body>
+  <h1>PopBox</h1>
+
+  <div class='popbox'>
+    <a class='open' href='#'>
+      <img src='images/plus.png' style='width:14px;position:relative;'> Click Here!
+    </a>
+
+    <div class='collapse'>
+      <div class='box'>
+        <div class='arrow'></div>
+        <div class='arrow-border'></div>
+
+        <form action="http://gristmill.createsend.com/t/j/s/nklki/" method="post" id="subForm">
+          <p><small>Please complete the form to sign up for the <a href="http://gristmill.io" target="_blank">Gristmill.io</a> mailing list!</small></p>
+          <div class="input">
+            <input type="text" name="cm-name" id="name" placeholder="Name" />
+          </div>
+          <div class="input">
+            <input type="text" name="cm-nklki-nklki" id="nklki-nklki" placeholder="Email" />
+          </div>
+          <div class="input">
+            <textarea name="cm-f-tlhll" id="Message" placeholder="Comments"></textarea>
+          </div>
+          <input type="submit" value="Get In Touch" /> <a href="#" class="close">Cancel</a>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <p>jQuery PopBox is a simple, HighRise inspired balloon UI element.</p>
+
+  <footer>
+    <a href="index.html">Back to README</a>
+  </footer>
+</body>
