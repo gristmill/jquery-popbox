@@ -3,9 +3,12 @@
 jQuery PopBox is a simple balloon UI element inspired by High Rise.
 
 # Usage
-jQuery PopBox requires a specific HTML structure in order to work.
+jQuery PopBox requires a specific HTML structure in order to work. There is also a small stylesheet that should be used.
 
 ```html
+<script type='text/javascript' charset='utf-8' src='popbox.js'></script>
+<link rel='stylesheet' href='popbox.css' type='text/css'>
+
 <div class='popbox'>
   <a class='open' href='#'>Click Here!</a>
 
