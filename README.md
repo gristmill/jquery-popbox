@@ -1,6 +1,6 @@
 # jQuery PopBox
 
-jQuery PopBox is a simple, balloon UI element inspired by High Rise.
+jQuery PopBox is a simple balloon UI element inspired by High Rise.
 
 # Usage
 jQuery PopBox requires a specific HTML structure in order to work.
