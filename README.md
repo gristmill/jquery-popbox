@@ -52,3 +52,9 @@ If there are any naming conflicts, they can be overridden.
 
 ## Screenshot
 ![jQuery PopBox Screenshot](https://github.com/gristmill/jquery-popbox/raw/master/screenshot.png)
+
+## Credits
+
+jQuery PopBox developed by [Sean Behan](http://twitter.com/_sbehan) at [Gristmill.io](http://gristmill.io)
+
+It is inspired by the balloon UI element found in 37signals.com's HighRise CRM.
