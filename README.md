@@ -7,7 +7,7 @@ jQuery PopBox requires a specific HTML structure in order to work.
 
 ```html
 <div class='popbox'>
-  <a class='pop' href='#'>Click Here!</a>
+  <a class='open' href='#'>Click Here!</a>
 
   <div class='collapse'>
     <div class='box'>
@@ -15,17 +15,16 @@ jQuery PopBox requires a specific HTML structure in order to work.
       <div class='arrow-border'></div>
 
       Content in PopBox goes here :)
+      <a href="#" class="cancel">close</a>
     </div>
   </div>
 </div>
 ```
 
-- The ".popbox" element should wrap both the element that will trigger opening the popbox and the content inside the popbox.
-- The ".collapse" element is used for collapsing the relatively positioned element (".box") so it doesn't take up any space in the document.
-- The ".arrow" and ".arrow-border" classes
+And to
 
 ```html
-<script type='text/javascript' charset='utf-8'>
+<script type='text/javascript'>
    $(document).ready(function(){
      $('.popbox').popbox();
    });
