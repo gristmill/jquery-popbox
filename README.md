@@ -3,7 +3,7 @@
 jQuery PopBox is a simple balloon UI element inspired by 37Signals's Highrise CRM.
 
 # Usage
-jQuery PopBox requires a specific HTML structure in order to work. There is also a small stylesheet that can be used. jQuery is also a dependency.
+jQuery PopBox requires a specific HTML structure in order to work. There is also a small stylesheet that can be used. jQuery is a dependency.
 
 ```html
 <head>
