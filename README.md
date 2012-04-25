@@ -3,12 +3,18 @@
 jQuery PopBox is a simple balloon UI element inspired by 37Signals's Highrise CRM.
 
 # Usage
-jQuery PopBox requires a specific HTML structure in order to work. There is also a small stylesheet that can be used.
+jQuery PopBox requires a specific HTML structure in order to work. There is also a small stylesheet that can be used. jQuery is also a dependency.
 
 ```html
-<script type='text/javascript' charset='utf-8' src='popbox.js'></script>
-<link rel='stylesheet' href='popbox.css' type='text/css'>
+<head>
+  <script type='text/javascript' charset='utf-8' src='jquery.js'></script>
+  <script type='text/javascript' charset='utf-8' src='popbox.js'></script>
+  <link rel='stylesheet' href='popbox.css' type='text/css'>
+</head>
+```
 
+The HTML structure looks like this.
+```html
 <div class='popbox'>
   <a class='open' href='#'>Click Here!</a>
 
@@ -18,13 +24,14 @@ jQuery PopBox requires a specific HTML structure in order to work. There is also
       <div class='arrow-border'></div>
 
       Content in PopBox goes here :)
+
       <a href="#" class="close">close</a>
     </div>
   </div>
 </div>
 ```
 
-Invoke the plugin by calling it on a selector.
+Invoke the plugin by calling it on a selector like normal.
 
 ```html
 <script type='text/javascript'>
@@ -34,7 +41,7 @@ Invoke the plugin by calling it on a selector.
 </script>
 ```
 
-If there are any naming conflicts, they can be overridden.
+If there are any CSS class name conflicts, they can be overridden.
 
 ```html
 <script type='text/javascript'>
@@ -43,7 +50,7 @@ If there are any naming conflicts, they can be overridden.
        'open'          : '.open',
        'box'           : '.box',
        'arrow'         : '.arrow',
-       'arrow-border'  : '.arrow-border',
+       'arrow_border'  : '.arrow_border',
        'close'         : '.close'
       });
    });
