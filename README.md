@@ -67,3 +67,9 @@ If there are any CSS class name conflicts, they can be overridden.
 jQuery PopBox developed by [Sean Behan](http://twitter.com/_sbehan) at [Gristmill.io](http://gristmill.io)
 
 It is inspired by the balloon UI element found in 37Signals Highrise CRM.
+
+## License
+
+MIT license:
+
+http://www.opensource.org/licenses/MIT
