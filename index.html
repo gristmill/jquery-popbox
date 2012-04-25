@@ -28,84 +28,81 @@
       <section>
         <h1>jQuery PopBox</h1>
 
-<p>jQuery PopBox is a simple balloon UI element inspired by High Rise.</p>
+        <p>jQuery PopBox is a simple balloon UI element inspired by High Rise.</p>
 
-<p><strong><a href="example.html">Click for example</a></strong></p>
+        <p><strong><a href="example.html">Click for example</a></strong></p>
 
-<h1>Usage</h1>
+        <h1>Usage</h1>
 
-<p>jQuery PopBox requires a specific HTML structure in order to work. There is also a small stylesheet that can be used.</p>
+        <p>jQuery PopBox requires a specific HTML structure in order to work. There is also a small stylesheet that can be used.</p>
 
-<div class="highlight">
-<pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">charset=</span><span class="s">'utf-8'</span> <span class="na">src=</span><span class="s">'popbox.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">'stylesheet'</span> <span class="na">href=</span><span class="s">'popbox.css'</span> <span class="na">type=</span><span class="s">'text/css'</span><span class="nt">&gt;</span>
+        <div class="highlight">
+        <pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">charset=</span><span class="s">'utf-8'</span> <span class="na">src=</span><span class="s">'popbox.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">'stylesheet'</span> <span class="na">href=</span><span class="s">'popbox.css'</span> <span class="na">type=</span><span class="s">'text/css'</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'popbox'</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">'open'</span> <span class="na">href=</span><span class="s">'#'</span><span class="nt">&gt;</span>Click Here!<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'popbox'</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">'open'</span> <span class="na">href=</span><span class="s">'#'</span><span class="nt">&gt;</span>Click Here!<span class="nt">&lt;/a&gt;</span>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'collapse'</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'box'</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'arrow'</span><span class="nt">&gt;&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'arrow-border'</span><span class="nt">&gt;&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'collapse'</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'box'</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'arrow'</span><span class="nt">&gt;&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'arrow-border'</span><span class="nt">&gt;&lt;/div&gt;</span>
 
-      Content in PopBox goes here :)
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span>close<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre>
-</div>
+              Content in PopBox goes here :)
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span>close<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        </pre>
+        </div>
 
+        <p>Invoke the plugin by calling it on a selector.</p>
 
-<p>Invoke the plugin by calling it on a selector.</p>
+        <div class="highlight">
+        <pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span><span class="nt">&gt;</span>
+           <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+             <span class="nx">$</span><span class="p">(</span><span class="s1">'.popbox'</span><span class="p">).</span><span class="nx">popbox</span><span class="p">();</span>
+           <span class="p">});</span>
+        <span class="nt">&lt;/script&gt;</span>
+        </pre>
+        </div>
 
-<div class="highlight">
-<pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span><span class="nt">&gt;</span>
-   <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-     <span class="nx">$</span><span class="p">(</span><span class="s1">'.popbox'</span><span class="p">).</span><span class="nx">popbox</span><span class="p">();</span>
-   <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span>
-</pre>
-</div>
+        <p>If there are any naming conflicts, they can be overridden.</p>
 
+        <div class="highlight">
+        <pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span><span class="nt">&gt;</span>
+           <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+             <span class="nx">$</span><span class="p">(</span><span class="s1">'.popbox'</span><span class="p">).</span><span class="nx">popbox</span><span class="p">({</span>
+               <span class="s1">'open'</span>          <span class="o">:</span> <span class="s1">'.open'</span><span class="p">,</span>
+               <span class="s1">'box'</span>           <span class="o">:</span> <span class="s1">'.box'</span><span class="p">,</span>
+               <span class="s1">'arrow'</span>         <span class="o">:</span> <span class="s1">'.arrow'</span><span class="p">,</span>
+               <span class="s1">'arrow-border'</span>  <span class="o">:</span> <span class="s1">'.arrow-border'</span><span class="p">,</span>
+               <span class="s1">'close'</span>         <span class="o">:</span> <span class="s1">'.close'</span>
+              <span class="p">});</span>
+           <span class="p">});</span>
+        <span class="nt">&lt;/script&gt;</span>
+        </pre>
+        </div>
 
-<p>If there are any naming conflicts, they can be overridden.</p>
+        <h2>Screenshot </h2><p><strong><a href="example.html">Click for example</a></strong></p>
 
-<div class="highlight">
-<pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span><span class="nt">&gt;</span>
-   <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-     <span class="nx">$</span><span class="p">(</span><span class="s1">'.popbox'</span><span class="p">).</span><span class="nx">popbox</span><span class="p">({</span>
-       <span class="s1">'open'</span>          <span class="o">:</span> <span class="s1">'.open'</span><span class="p">,</span>
-       <span class="s1">'box'</span>           <span class="o">:</span> <span class="s1">'.box'</span><span class="p">,</span>
-       <span class="s1">'arrow'</span>         <span class="o">:</span> <span class="s1">'.arrow'</span><span class="p">,</span>
-       <span class="s1">'arrow-border'</span>  <span class="o">:</span> <span class="s1">'.arrow-border'</span><span class="p">,</span>
-       <span class="s1">'close'</span>         <span class="o">:</span> <span class="s1">'.close'</span>
-      <span class="p">});</span>
-   <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span>
-</pre>
-</div>
+        <p><img src="https://github.com/gristmill/jquery-popbox/raw/master/screenshot.png" alt="jQuery PopBox Screenshot"></p>
 
-<h2>Screenshot </h2><p><strong><a href="example.html">Click for example</a></strong></p>
+        <h2>Credits</h2>
 
-<p><img src="https://github.com/gristmill/jquery-popbox/raw/master/screenshot.png" alt="jQuery PopBox Screenshot"></p>
+        <p>jQuery PopBox developed by <a href="http://twitter.com/_sbehan">Sean Behan</a> at <a href="http://gristmill.io">Gristmill</a></p>
 
-<h2>Credits</h2>
-
-<p>jQuery PopBox developed by <a href="http://twitter.com/_sbehan">Sean Behan</a> at <a href="http://gristmill.io">Gristmill</a></p>
-
-<p>It is inspired by the balloon UI element found in 37signals.com's HighRise CRM.</p>
+        <p>It is inspired by the balloon UI element found in 37signals.com's HighRise CRM.</p>
       </section>
+
       <footer>
         <p>This project is maintained by <a href="https://github.com/gristmill">gristmill</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-
   </body>
+  <script src="javascripts/scale.fix.js"></script>
   <script type="text/javascript">
-
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-31128736-1']);
     _gaq.push(['_trackPageview']);
@@ -115,6 +112,5 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-
   </script>
 </html>
